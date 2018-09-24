@@ -1,0 +1,10 @@
+if a = 0 b = 0 then output should be a and c which will be a
+if a = 0 and b = 1 then output should be c and d
+mux1 b a (and2 c d)
+
+if a = 1 and b = 0 then output should be a and c which will be c
+if a = 1 and b = 1 then output should be c or d
+mux1 b c (or2 c d)
+or2 c (and2 b d)
+
+x = mux1 a (mux1 b a (and2 c d)) (or2 c (and2 b d))
